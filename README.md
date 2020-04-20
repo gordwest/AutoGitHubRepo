@@ -2,4 +2,11 @@
 
 This program allows me to create a new local directory and a new GitHub repo with a simple CMD command.
 
-Type in create <filename>. The new directories will be created and VS Code will open to the new project.
+Dependencies:
+    - pyGithub
+
+Goals:
+    - Command line function that will initialize a new project. 
+    - This involves creating a new local directory as well as a new GitHub repository.
+    - Initialized with a README file and first commit to online repo.
+

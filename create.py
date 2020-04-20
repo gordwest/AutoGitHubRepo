@@ -6,7 +6,7 @@ from config import creds
 projName = str(sys.argv[1])
 path = "C:/Users/gordi/Desktop/CODE/GitHub/"
 
-commands = [f'echo "# {projName}" >> README.md',
+commands = [f'echo # {projName} >> README.md',
             'git init',
             f'git remote add origin https://github.com/gordwest/{projName}.git',
             'git add .',
@@ -24,12 +24,13 @@ else:
     repo = user.create_repo(projName)
     print('Successfully created repository {}'.format(projName))
 
-# change dir to new porject folder
-os.chdir(path + projName)
+    # change dir to new porject folder
+    os.chdir(path + projName)
 
-# perform git commands
-for c in commands:
-    os.system(c)
+    # perform git commands
+    for c in commands:
+        os.system(c)
 
-print(f'{projName} created locally')
-os.system('code .')
+    print(f'{projName} created locally')
+    os.system('code .')
+    
