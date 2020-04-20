@@ -4,7 +4,14 @@ from config import creds
 
 # get arg from terminal command
 projName = str(sys.argv[1])
-path = "/mnt/c/Users/gordi/Desktop/CODE/GitHub/"
+path = "C:/Users/gordi/Desktop/CODE/GitHub/"
+
+commands = [f'echo "# {projName}" >> README.md',
+            'git init',
+            f'git remote add origin https://github.com/gordwest/{projName}.git',
+            'git add .',
+            'git commit -m "Initial commit"',
+            'git push -u origin master']
 
 # create new folder
 try:
@@ -16,3 +23,13 @@ else:
     user = Github(creds['username'], creds['password']).get_user() # login into github
     repo = user.create_repo(projName)
     print('Successfully created repository {}'.format(projName))
+
+# change dir to new porject folder
+os.chdir(path + projName)
+
+# perform git commands
+for c in commands:
+    os.system(c)
+
+print(f'{projName} created locally')
+os.system('code .')
