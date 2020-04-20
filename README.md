@@ -3,7 +3,7 @@
 #### This program allows me to create a new local directory and GitHub repository with a simple CMD command.
 
 ### Dependencies:
--pyGithub
+- pyGithub
 
 ### Goals:
 - Command line function that will initialize a new project. 
