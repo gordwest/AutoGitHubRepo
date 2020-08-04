@@ -4,21 +4,19 @@ from config import creds
 
 # get arg from terminal command
 projName = str(sys.argv[1])
-path = "C:/Users/gordi/Desktop/CODE/GitHub/"
+path = "/Users/gord/Documents/Code/Projects/"
 
-commands = [f'echo # {projName} >> README.md',
+commands = ['touch README.md',
             'git init',
-            f'git remote add origin https://github.com/gordwest/{projName}.git',
+            'git remote add origin https://github.com/gordwest/{}.git'.format(projName),
             'git add .',
             'git commit -m "Initial commit"',
             'git push -u origin master']
 
 # create new folder
 try:
-    os.mkdir(path + projName)
-except OSError:
-    print ("Creation of the folder: {} failed, this project already exists.".format(path, projName))
-else:
+    os.mkdir(path + projName) # if folder creation succeeds, continue
+
     # create new repository on github 
     user = Github(creds['username'], creds['password']).get_user() # login into github
     repo = user.create_repo(projName)
@@ -31,6 +29,10 @@ else:
     for c in commands:
         os.system(c)
 
-    print(f'{projName} created locally')
-    os.system('code .')
+    print('{} created locally'.format(projName))
+
+except OSError:
+    print ("Creation of the folder: {} failed, this project already exists.".format(projName))
+
+    
     

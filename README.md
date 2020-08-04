@@ -1,9 +1,9 @@
 # Automatic GitHub Repository
 
-#### This program allows me to create a new local directory and GitHub repository with a simple CMD command.
+#### This program allows me to create a new local directory and GitHub repository with a simple terminal command.
 
 ### Dependencies:
-- pyGithub
+- pyGithub (pip install PyGithub)
 
 ### Features:
 - Command line function that will initialize a new project. 

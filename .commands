@@ -1,0 +1,2 @@
+# setting up the terminal alias command
+alias create="python Users/gord/Documents/Code/Projects/AutoGitHubRepo/create.py"
