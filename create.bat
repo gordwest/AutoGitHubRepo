@@ -3,5 +3,5 @@
 If "%1"=="" (
     echo Enter a project name!
 ) else ( 
-    python "C:/Users/gordi/Desktop/CODE/GitHub/AutoGitHubRepo/create.py" %1
+    python "C:/Users/gordi/Desktop/CODE/Projects/AutoGitHubRepo/create.py" %1
 )

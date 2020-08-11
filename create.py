@@ -4,7 +4,7 @@ from config import creds
 
 # get arg from terminal command
 projName = str(sys.argv[1])
-path = "C:/Users/gordi/Desktop/CODE/GitHub/"
+path = "C:/Users/gordi/Desktop/CODE/Projects/"
 
 commands = [f'echo # {projName} >> README.md',
             'git init',
